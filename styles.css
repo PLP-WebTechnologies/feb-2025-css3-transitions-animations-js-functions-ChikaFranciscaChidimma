@@ -1,0 +1,49 @@
+/* Basic styling for the button and image */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Image animation */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#animateImage {
+  width: 150px;
+  height: 150px;
+  transition: transform 1s ease-in-out;
+}
+
+/* Add an animated class when triggered by JavaScript */
+.animate {
+  animation: slideAnimation 2s ease-in-out;
+}
